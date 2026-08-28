@@ -1,13 +1,24 @@
 # Copyright (C) 2026 Mohammad Amir Khusru Akhtar
 # Licensed under the Apache License, Version 2.0.
+
 from __future__ import annotations
 
 from pathlib import Path
+import sys
+
+# Make the local src/ package visible on Streamlit Cloud
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
 import numpy as np
 import streamlit as st
+
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import roc_auc_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
