@@ -1,0 +1,30 @@
+name: One-click reproducibility
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e . pytest
+      - name: Test
+        run: pytest -q
+      - name: Reproduce manuscript results
+        run: morphopreserve --data data/ranchi_nasal_morphometry.csv --out results --repeats 10 --splits 10 --bootstrap 3000
+      - name: Upload regenerated results
+        uses: actions/upload-artifact@v4
+        with:
+          name: morphopreserve-results
+          path: results/
