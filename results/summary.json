@@ -1,0 +1,267 @@
+{
+  "audit": {
+    "n": 200,
+    "male_n": 100,
+    "female_n": 100,
+    "ni_abs_diff_gt_0_5": 32,
+    "ni_abs_diff_gt_2": 20,
+    "ni_abs_diff_gt_5": 8,
+    "max_abs_ni_difference": 42.94193869096935,
+    "nasal_type_mismatches": 19,
+    "technical_plausibility_exclusions": [
+      "R180"
+    ]
+  },
+  "analysis_n": 199,
+  "male_n": 100,
+  "female_n": 99,
+  "acl_auc": 0.2719191919191918,
+  "acl_auc_95ci": [
+    0.17852091331582143,
+    0.36528593117408914
+  ],
+  "feature_ablation": [
+    {
+      "name": "NI only",
+      "auc": 0.5367676767676768,
+      "accuracy": 0.5226130653266332,
+      "balanced_accuracy": 0.5225757575757576,
+      "sensitivity": 0.53,
+      "specificity": 0.5151515151515151,
+      "precision": 0.5247524752475248,
+      "f1": 0.527363184079602,
+      "mcc": 0.045156076601761824,
+      "brier": 0.2501980698056804,
+      "auc_95ci_low": 0.4555728288876494,
+      "auc_95ci_high": 0.6133156376634638
+    },
+    {
+      "name": "NW only",
+      "auc": 0.7861616161616162,
+      "accuracy": 0.6984924623115578,
+      "balanced_accuracy": 0.6985858585858586,
+      "sensitivity": 0.68,
+      "specificity": 0.7171717171717171,
+      "precision": 0.7083333333333334,
+      "f1": 0.6938775510204082,
+      "mcc": 0.39741264635200124,
+      "brier": 0.19028619177917738,
+      "auc_95ci_low": 0.7179521276595744,
+      "auc_95ci_high": 0.8389658676365709
+    },
+    {
+      "name": "NH only",
+      "auc": 0.7075757575757575,
+      "accuracy": 0.628140703517588,
+      "balanced_accuracy": 0.6281818181818182,
+      "sensitivity": 0.62,
+      "specificity": 0.6363636363636364,
+      "precision": 0.6326530612244898,
+      "f1": 0.6262626262626263,
+      "mcc": 0.25638953560463423,
+      "brier": 0.21409870056057567,
+      "auc_95ci_low": 0.6373642999481227,
+      "auc_95ci_high": 0.7741937085192035
+    },
+    {
+      "name": "NW + NH",
+      "auc": 0.8086868686868686,
+      "accuracy": 0.7336683417085427,
+      "balanced_accuracy": 0.7336868686868687,
+      "sensitivity": 0.73,
+      "specificity": 0.7373737373737373,
+      "precision": 0.7373737373737373,
+      "f1": 0.7336683417085427,
+      "mcc": 0.4673737373737374,
+      "brier": 0.1778532206952801,
+      "auc_95ci_low": 0.7509021700059387,
+      "auc_95ci_high": 0.8589271434011533
+    },
+    {
+      "name": "NW + NH + NI",
+      "auc": 0.8082828282828283,
+      "accuracy": 0.7336683417085427,
+      "balanced_accuracy": 0.7336868686868687,
+      "sensitivity": 0.73,
+      "specificity": 0.7373737373737373,
+      "precision": 0.7373737373737373,
+      "f1": 0.7336683417085427,
+      "mcc": 0.4673737373737374,
+      "brier": 0.17779415877100804,
+      "auc_95ci_low": 0.750171287469134,
+      "auc_95ci_high": 0.8576408307039495
+    }
+  ],
+  "models": [
+    {
+      "name": "Logistic regression",
+      "auc": 0.8109090909090909,
+      "accuracy": 0.7336683417085427,
+      "balanced_accuracy": 0.7336868686868687,
+      "sensitivity": 0.73,
+      "specificity": 0.7373737373737373,
+      "precision": 0.7373737373737373,
+      "f1": 0.7336683417085427,
+      "mcc": 0.4673737373737374,
+      "brier": 0.17665220783803695,
+      "auc_95ci_low": 0.7540353358547183,
+      "auc_95ci_high": 0.860967794581656
+    },
+    {
+      "name": "LDA",
+      "auc": 0.8117171717171717,
+      "accuracy": 0.7286432160804021,
+      "balanced_accuracy": 0.7286868686868686,
+      "sensitivity": 0.72,
+      "specificity": 0.7373737373737373,
+      "precision": 0.7346938775510204,
+      "f1": 0.7272727272727273,
+      "mcc": 0.45741994374223166,
+      "brier": 0.17675279424757834,
+      "auc_95ci_low": 0.7550651900415716,
+      "auc_95ci_high": 0.8612251428911646
+    },
+    {
+      "name": "Linear SVM",
+      "auc": 0.8122222222222222,
+      "accuracy": 0.7336683417085427,
+      "balanced_accuracy": 0.7336868686868687,
+      "sensitivity": 0.73,
+      "specificity": 0.7373737373737373,
+      "precision": 0.7373737373737373,
+      "f1": 0.7336683417085427,
+      "mcc": 0.4673737373737374,
+      "brier": 0.17732953046945285,
+      "auc_95ci_low": 0.7572074360016254,
+      "auc_95ci_high": 0.8624976915991186
+    },
+    {
+      "name": "Random forest",
+      "auc": 0.7822222222222223,
+      "accuracy": 0.6934673366834171,
+      "balanced_accuracy": 0.6937878787878788,
+      "sensitivity": 0.63,
+      "specificity": 0.7575757575757576,
+      "precision": 0.7241379310344828,
+      "f1": 0.6737967914438503,
+      "mcc": 0.3906659535928507,
+      "brier": 0.18827192666698422,
+      "auc_95ci_low": 0.7180204104746012,
+      "auc_95ci_high": 0.8394406973487677
+    },
+    {
+      "name": "Gradient boosting",
+      "auc": 0.7682323232323233,
+      "accuracy": 0.678391959798995,
+      "balanced_accuracy": 0.6784848484848485,
+      "sensitivity": 0.66,
+      "specificity": 0.696969696969697,
+      "precision": 0.6875,
+      "f1": 0.673469387755102,
+      "mcc": 0.3571862391169818,
+      "brier": 0.19430093324220743,
+      "auc_95ci_low": 0.7046756441230067,
+      "auc_95ci_high": 0.8265501418922232
+    }
+  ],
+  "selective_prediction": [
+    {
+      "probability_threshold": 0.5,
+      "classified_n": 199,
+      "coverage": 1.0,
+      "abstention_rate": 0.0,
+      "selective_accuracy": 0.7336683417085427,
+      "selective_balanced_accuracy": 0.7336868686868687
+    },
+    {
+      "probability_threshold": 0.6,
+      "classified_n": 146,
+      "coverage": 0.7336683417085427,
+      "abstention_rate": 0.26633165829145733,
+      "selective_accuracy": 0.7945205479452054,
+      "selective_balanced_accuracy": 0.7961603613777527
+    },
+    {
+      "probability_threshold": 0.7,
+      "classified_n": 108,
+      "coverage": 0.542713567839196,
+      "abstention_rate": 0.457286432160804,
+      "selective_accuracy": 0.8703703703703703,
+      "selective_balanced_accuracy": 0.8737931034482759
+    },
+    {
+      "probability_threshold": 0.75,
+      "classified_n": 88,
+      "coverage": 0.44221105527638194,
+      "abstention_rate": 0.5577889447236181,
+      "selective_accuracy": 0.875,
+      "selective_balanced_accuracy": 0.8762939958592133
+    },
+    {
+      "probability_threshold": 0.8,
+      "classified_n": 65,
+      "coverage": 0.32663316582914576,
+      "abstention_rate": 0.6733668341708543,
+      "selective_accuracy": 0.8923076923076924,
+      "selective_balanced_accuracy": 0.8967181467181468
+    },
+    {
+      "probability_threshold": 0.85,
+      "classified_n": 40,
+      "coverage": 0.20100502512562815,
+      "abstention_rate": 0.7989949748743719,
+      "selective_accuracy": 0.9,
+      "selective_balanced_accuracy": 0.8933333333333333
+    }
+  ],
+  "calibration": [
+    {
+      "calibration_intercept": 0.004036914262376418,
+      "calibration_slope": 0.9835794812399995,
+      "brier_score": 0.1778532206952801
+    }
+  ],
+  "sensitivity_analysis": [
+    {
+      "scenario": "Primary broad technical screen",
+      "n": 199,
+      "male_n": 100,
+      "female_n": 99,
+      "auc_ni": 0.5367676767676768,
+      "auc_nw_nh": 0.8086868686868686,
+      "acl_auc": 0.2719191919191918,
+      "acl_95ci_low": 0.17852091331582143,
+      "acl_95ci_high": 0.36528593117408914
+    },
+    {
+      "scenario": "Sensitivity A: retain all 200",
+      "n": 200,
+      "male_n": 100,
+      "female_n": 100,
+      "auc_ni": 0.5467,
+      "auc_nw_nh": 0.7969999999999999,
+      "acl_auc": 0.25029999999999997,
+      "acl_95ci_low": 0.1661474388448003,
+      "acl_95ci_high": 0.3350281239044891
+    },
+    {
+      "scenario": "Sensitivity B: remove flagged record only",
+      "n": 199,
+      "male_n": 100,
+      "female_n": 99,
+      "auc_ni": 0.5367676767676768,
+      "auc_nw_nh": 0.8086868686868686,
+      "acl_auc": 0.2719191919191918,
+      "acl_95ci_low": 0.1767623519836584,
+      "acl_95ci_high": 0.3630711411509453
+    }
+  ],
+  "analysis_settings": {
+    "feature_ablation_repeats": 10,
+    "model_benchmark_repeats": 3,
+    "sensitivity_repeats": 10,
+    "splits": 10,
+    "bootstrap": 3000,
+    "seed": 2026
+  }
+}

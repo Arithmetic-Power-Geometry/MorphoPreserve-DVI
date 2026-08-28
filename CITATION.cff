@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use MorphoPreserve-DVI, please cite the associated preprint."
+title: "MorphoPreserve-DVI"
+version: "1.0.0"
+date-released: "2026-08-28"
+license: "Apache-2.0"
+
+authors:
+  - family-names: "Akhtar"
+    given-names: "Mohammad Amir Khusru"
+  - family-names: "Mathew"
+    given-names: "Madona"
+  - family-names: "Xalxo"
+    given-names: "Denny Daniel Binod"
+
+repository-code: "https://github.com/Arithmetic-Power-Geometry/MorphoPreserve-DVI"
+
+preferred-citation:
+  type: article
+  title: "Beyond the Nasal Index: Anthropometric Compression Loss and Uncertainty-Aware Sex Estimation for Disaster Victim Identification"
+  authors:
+    - family-names: "Akhtar"
+      given-names: "Mohammad Amir Khusru"
+    - family-names: "Mathew"
+      given-names: "Madona"
+    - family-names: "Xalxo"
+      given-names: "Denny Daniel Binod"
+  year: 2026
+  doi: "10.5281/zenodo.22141702"
