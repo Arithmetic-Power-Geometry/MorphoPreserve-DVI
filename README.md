@@ -9,7 +9,7 @@ The framework tests whether deterministic compression of primary nasal width and
 
 > **Scope:** This software is intended for research and supplementary biological-profile decision support only. It is **not** a victim-identification system and does not replace primary identification methods such as DNA analysis, fingerprints, forensic odontology, formal reconciliation procedures, or professional forensic judgment.
 
-## One-click GitHub workflow
+## GitHub workflow
 
 The repository includes a GitHub Actions workflow for automated reproducibility.
 
